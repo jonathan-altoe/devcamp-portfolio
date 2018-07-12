@@ -1,25 +1,18 @@
-# README
 # tutorial : Devcamp Portfolio Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a tutorial I followed to learn ruby on rails 5. 
 
-Things you may want to cover:
+### Features
+- Test1
+- Blog
 
-* Ruby version
+### Code Example
+```ruby
+def my_method
+  puts "Hello"
+end
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```javascript
+alert('hello!');
+```
