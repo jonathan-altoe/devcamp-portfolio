@@ -5,11 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+
+puts '3 topics created'
 
 10.times do |i|
   Blog.create!(
     title: "My Blog Post #{i}",
-    body: 'Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans, ut ab omni culpa inmunibus parceretur, cum non inpetraret, minabatur se discessurum: ut saltem id metuens perquisitor malivolus tandem desineret quieti coalitos homines in aperta pericula proiectare.'
+    body: 'Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans, ut ab omni culpa inmunibus parceretur, cum non inpetraret, minabatur se discessurum: ut saltem id metuens perquisitor malivolus tandem desineret quieti coalitos homines in aperta pericula proiectare.',
+    topic_id: Topic.last.id
   )
 end
 
@@ -24,14 +32,32 @@ end
 
 puts '5 Skills created'
 
-9.times do |i|
+8.times do |i|
   Portfolio.create!(
     title: "Portfolio title: #{i}",
-    subtitle: 'My great service',
+    subtitle: 'Ruby on Rails',
     body: 'Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans',
     main_image: 'http://via.placeholder.com/600x400',
     thumb_image: 'http://via.placeholder.com/350x200'
   )
 end
 
+1.times do |i|
+  Portfolio.create!(
+      title: "Portfolio title: #{i}",
+      subtitle: 'Angular',
+      body: 'Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans',
+      main_image: 'http://via.placeholder.com/600x400',
+      thumb_image: 'http://via.placeholder.com/350x200'
+  )
+end
+
 puts '9 portfolios created'
+
+3.times do |i|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{i}"
+  )
+end
+
+puts '3 technonologies created'
