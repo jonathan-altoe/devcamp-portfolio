@@ -1,5 +1,8 @@
 class Portfolio < ApplicationRecord
   has_many :technologies
+  accepts_nested_attributes_for :technologies,
+                                           reject_if: lambda {|techno_attrs| techno_attrs['name'].blank?}
+
   include Placeholder
   validates_presence_of :title, :main_image, :body, :thumb_image
 
