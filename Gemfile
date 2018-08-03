@@ -62,3 +62,5 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'jquery-rails'
 
 gem 'bootstrap', '~> 4.1.3'
+
+gem 'jonathan_view_tool',git: 'https://github.com/jonathan-altoe/jonathan_view_tool'
