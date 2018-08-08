@@ -112,7 +112,7 @@ body {
 Custom
  */
 
-.card-body{
+.card{
   Color:black;
 }
 
@@ -122,4 +122,10 @@ Custom
 
 .register-text {
   text-align: right;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
 }
