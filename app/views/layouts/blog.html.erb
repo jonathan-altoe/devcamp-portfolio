@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= @page_title %></title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <meta name="keywords" content="<%= @seo_keywords %>" />
-</head>
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+    <meta name="keywords" content="<%= @seo_keywords %>" />
+  </head>
 
-<%= login_helper %>
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-<%= yield %>
+    <%= render 'shared/blog_masthead' %>
 
-<%= render 'shared/nav', location: 'bottom'%>
+    <main role="main" class="container">
 
-<%= source_helper('blog') %>
-</body>
+      <%= render 'shared/blog_nav' %>
+
+      <div class="row">
+        <%= yield %>
+
+        <%= render 'shared/blog_sidebar' %>
+      </div>
+
+      <%= render 'shared/blog_footer' %>
+      <%= source_helper('blog') %>
+
+    </main>
+
+  </body>
 </html>
