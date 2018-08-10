@@ -81,3 +81,4 @@ gem 'carrierwave-aws', '~> 1.3'
 
 gem 'dotenv-rails', '~> 2.5'
 
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
