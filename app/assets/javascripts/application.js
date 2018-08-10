@@ -17,5 +17,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require html5.sortable
+//= require cocoon
+//= require gritter
 //= require turbolinks
 //= require_tree .
