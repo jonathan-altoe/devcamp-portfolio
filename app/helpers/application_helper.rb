@@ -42,6 +42,10 @@ module ApplicationHelper
             url: portfolios_path,
             title: 'Portfolio'
         },
+        {
+            url: france_info_news_path,
+            title: 'France Info news'
+        },
     ]
   end
 

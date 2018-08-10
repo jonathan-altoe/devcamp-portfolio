@@ -28,3 +28,4 @@
 # I don't want to show the secrets.yml and .idea
 /config/secrets.yml
 /.idea/
+.env
