@@ -18,10 +18,14 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
 
-    @page_title = @blog.title
-    @seo_keywords = @blog.body
+    if logged_in?(:site_admin) || @blog.published?
+      @comment = Comment.new
+      @page_title = @blog.title
+      @seo_keywords = @blog.body
+    else
+      redirect_to blogs_path, notice: 'You are not authorized to access this page'
+    end
   end
 
   # GET /blogs/new
@@ -82,7 +86,6 @@ class BlogsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_blog
-    #@blog = Blog.find(params[:id])
     @blog = Blog.friendly.find(params[:id])
   end
 
