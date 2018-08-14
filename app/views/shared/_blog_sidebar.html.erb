@@ -5,6 +5,10 @@
   </div>
 
   <div>
+    <%= source_helper('alert alert-info') %>
+  </div>
+
+  <div>
     <h4>Topics</h4>
     <% @side_bar_topics.each do |topic| %>
       <p><%= link_to topic.title, topic_path(topic) %></p>
