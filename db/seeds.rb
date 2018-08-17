@@ -44,11 +44,11 @@ end
 
 1.times do |i|
   Portfolio.create!(
-      title: "Portfolio title: #{i}",
-      subtitle: 'Angular',
-      body: 'Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans',
-      main_image: 'http://via.placeholder.com/600x400',
-      thumb_image: 'http://via.placeholder.com/350x200'
+    title: "Portfolio title: #{i}",
+    subtitle: 'Angular',
+    body: 'Martinus agens illas provincias pro praefectis aerumnas innocentium graviter gemens saepeque obsecrans',
+    main_image: 'http://via.placeholder.com/600x400',
+    thumb_image: 'http://via.placeholder.com/350x200'
   )
 end
 
@@ -63,10 +63,18 @@ end
 puts '3 technonologies created'
 
 User.create!(
-              email: 'test@test.com',
-              name: 'Jonathan Altoé',
-              password: '123456',
-              roles: 'site_admin'
-             )
+  email: 'test@test.com',
+  name: 'Jonathan Altoé',
+  password: '123456',
+  roles: 'site_admin'
+ )
 
 puts '1 admin user created'
+
+User.create!(
+  email: 'test2@test.com',
+  name: 'Jonathan simple',
+  password: '123456',
+)
+
+puts '1 normal user created'
